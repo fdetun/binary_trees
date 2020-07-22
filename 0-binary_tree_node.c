@@ -21,7 +21,6 @@ if (!parent)
 {
 return (nd);
 }
-parent->left = nd;
 nd->parent = parent;
 return (nd);
 }
