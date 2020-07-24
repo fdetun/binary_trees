@@ -8,10 +8,12 @@
 
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
+binary_tree_t *fde = NULL;
 if (!node || !node->parent->parent || !node->parent)
 return (NULL);
-if (node->parent == node->parent->parent->right)
-return (node->parent->parent->left);
+fde = node->parent->parent;
+if (node->parent == fde->left)
+return (fde->right);
 else
-return (node->parent->parent->right);
+return (fde->left);
 }
