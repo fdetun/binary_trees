@@ -14,6 +14,6 @@ if (!tree)
 return (0);
 ctn = binary_tree_depth(tree->parent);
 if (tree->parent)
-ctn +=1;
+ctn += 1;
 return (ctn);
 }
